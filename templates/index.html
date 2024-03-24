@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVSift</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light grey background */
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White container background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow */
+        }
+        h1 {
+            color: #007bff; /* Blue heading */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group input[type="file"] {
+            display: none; 
+        }
+        .custom-file-upload {
+            border: 1px solid #007bff; /* Blue border */
+            color: #007bff; /* Blue text color */
+            padding: 10px 20px; /* Padding */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        .custom-file-upload:hover {
+            background-color: #007bff; /* Blue background on hover */
+            color: #ffffff; /* White text color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CVSift</h1>
+        <form action="/uploader" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" name="file" id="fileInput" onchange="displayFileName(this)">
+                <!-- File upload button -->
+                <label for="fileInput" class="custom-file-upload">Choose file</label>
+                <span id="fileName"></span> 
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Upload</button>
+        </form>
+    </div>
+
+    <script>
+        function displayFileName(input) {
+            var fileName = input.files[0].name; // Get the file name
+            document.getElementById('fileName').textContent = fileName; // Display the file name after user uploads
+        }
+    </script>
+</body>
+</html>

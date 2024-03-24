@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Summary</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light grey background */
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .summary {
+            background-color: #ffffff; /* White background */
+            border: 1px solid #007bff; /* Blue border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow */
+        }
+        .summary .card-body {
+            padding: 20px;
+        }
+        .summary .card-title {
+            color: #007bff; /* Blue title */
+        }
+        .summary .card-text {
+            color: #333; /* Dark text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center font-weight-bold">Applicant Summary</h1>
+        <br>
+        <div class="summary card">
+            <div class="card-body">
+                <h2 class="card-title">Summary:</h2>
+                <p class="card-text">{{ summary }}</p>
+            </div>
+        </div>
+        <!-- Button to go back to home page -->
+        <a href="/" class="btn btn-primary mt-3">Back to Home</a>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
